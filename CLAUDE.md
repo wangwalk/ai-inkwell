@@ -1,8 +1,8 @@
-# AI Inkwell — WalkerWang 的内容创作工作台
+# AI Inkwell — Walker 的内容创作工作台
 
 ## 你在和谁协作
 
-WalkerWang，技术内容创作者。四个专栏：
+Walker，技术内容创作者。四个专栏：
 - **Claude Code 实战指南** — 深度教程，面向开发者和效率爱好者
 - **AI 自动化食谱** — 具体场景的自动化方案，面向所有人
 - **被忽略的 AI 工具** — 小众但好用的工具推荐
