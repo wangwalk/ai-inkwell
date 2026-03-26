@@ -2,16 +2,16 @@
 series: Claude Code 指北
 title: "国内怎么用上 Claude Code？Mac + Windows 从零到跑通"
 date: "2026-03-24"
-status: draft
+status: published
 tags:
   - claude-code
   - 入门
 published:
-  公众号: 
-  知乎: 
-  小红书: 
-  X: 
-  博客: 
+  公众号: "https://mp.weixin.qq.com/s/PWz71JgIWmwC8DNktj8GCg"
+  知乎: "https://zhuanlan.zhihu.com/p/2020287584073438125"
+  小红书:
+  X:
+  博客:
 ---
 
 Claude Code 是目前最强的 AI 编程助手，但 Anthropic 官方不对大陆提供服务。注册要海外手机号，付费要海外信用卡，API 还得翻墙——光是装上就劝退了一大批人。
