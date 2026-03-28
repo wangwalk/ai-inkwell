@@ -108,7 +108,7 @@ await mode.run();
 ### 3. SDK 工厂：createAgentSession
 
 ```typescript
-// pi-coding-agent/src/core/sdk.ts
+// pi-coding-agent/src/core/sdk.ts（简化）
 export async function createAgentSession(options) {
   const settingsManager = options.settingsManager ?? SettingsManager.create(cwd, agentDir);
   const sessionManager = options.sessionManager ?? SessionManager.create(cwd);
@@ -141,6 +141,7 @@ export function agentLoop(
   context: AgentContext,
   config: AgentLoopConfig,
   signal?: AbortSignal,
+  streamFn?: StreamFn,  // 可选：自定义流式调用函数
 ): EventStream<AgentEvent, AgentMessage[]> {
   // ...
   stream.push({ type: "agent_start" });
