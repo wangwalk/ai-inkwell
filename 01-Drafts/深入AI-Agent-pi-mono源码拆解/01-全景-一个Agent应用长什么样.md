@@ -109,16 +109,26 @@ await mode.run();
 
 ```typescript
 // pi-coding-agent/src/core/sdk.ts
-import { Agent } from "@mariozechner/pi-agent-core";
+export async function createAgentSession(options) {
+  const settingsManager = options.settingsManager ?? SettingsManager.create(cwd, agentDir);
+  const sessionManager = options.sessionManager ?? SessionManager.create(cwd);
+  // ...
 
-// createAgentSession 内部：
-// 1. 初始化 Agent（来自 pi-agent-core）
-// 2. 注册内置工具（read, bash, edit, write, grep, find, ls）
-// 3. 加载插件
-// 4. 构建 AgentSession（产品层的包装）
+  agent = new Agent({
+    initialState: { systemPrompt: "", model, thinkingLevel, tools: [] },
+    convertToLlm: convertToLlmWithBlockImages,
+    sessionId: sessionManager.getSessionId(),
+    transformContext: async (messages) => {
+      // 插件可以在这里修改消息列表
+      return runner.emitContext(messages);
+    },
+  });
+
+  // ...加载插件、注册内置工具（read, bash, edit, write）、构建 AgentSession
+}
 ```
 
-这里是三层汇合的地方。`Agent` 来自 pi-agent-core，`Model` 来自 pi-ai，工具和 Session 管理是 pi-coding-agent 自己的。
+这里是三层汇合的地方。`Agent` 来自 pi-agent-core，`convertToLlm` 把 AgentMessage 转成 LLM 能理解的 Message，`transformContext` 让插件有机会在每轮 LLM 调用前修改消息列表。工具注册和 Session 管理则是 pi-coding-agent 自己的事。
 
 ### 4. Agent Loop：消息循环
 
