@@ -135,7 +135,7 @@ export async function createAgentSession(options) {
 当用户输入到达后，`AgentSession` 调用 pi-agent-core 的 `agentLoop()`：
 
 ```typescript
-// pi-agent-core/src/agent-loop.ts
+// packages/agent/src/agent-loop.ts
 export function agentLoop(
   prompts: AgentMessage[],
   context: AgentContext,
