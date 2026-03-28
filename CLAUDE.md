@@ -32,9 +32,11 @@ Walker，技术内容创作者。四个专栏：
 01-Drafts/         # 按专栏分目录，写作中的内容
 02-Published/      # 发布后移入，frontmatter 记录各平台链接
 03-Resources/      # 参考资料、竞品分析、数据源
+04-Learning/       # 学习笔记、面试题整理，非正式创作
 templates/         # 写作模板
-assets/            # 图片素材
 ```
+
+图片跟随文章放在同目录的 `imgs/` 子目录下，不单独集中存放。
 
 ## 发布平台
 
