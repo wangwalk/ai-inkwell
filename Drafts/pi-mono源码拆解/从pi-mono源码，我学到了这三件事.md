@@ -1,6 +1,6 @@
 ---
 series: 深入AI-Agent-pi-mono源码拆解
-title: "让 Agent 从 Demo 跑进生产，pi-mono 给了三个答案"
+title: "从 pi-mono 源码，我学到了这三件事"
 date: "2026-04-09"
 status: draft
 tags:
