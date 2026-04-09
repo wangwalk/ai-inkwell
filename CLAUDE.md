@@ -29,13 +29,13 @@ Walker，技术内容创作者。五个专栏：
 ## Vault 结构
 
 ```
-00-Inbox/          # 随手记的想法、链接、素材，零门槛进入
-01-Drafts/         # 按专栏分目录，写作中的内容
-02-Published/      # 发布后移入，frontmatter 记录各平台链接
-03-Resources/      # 参考资料、竞品分析、数据源
-04-Learning/       # 学习笔记、面试题整理，非正式创作
-templates/         # 写作模板
+Inbox/         # 随手记的想法、链接、素材，零门槛进入
+Drafts/        # 按专栏分目录，写作中的内容
+Published/     # 发布后移入，frontmatter 记录各平台链接
+templates/     # 写作模板（目前只保留在用的专栏）
 ```
+
+专栏目录命名用短 slug：`Claude-Code-指北`、`pi-mono源码拆解` 等。新开专栏时再建目录，不提前占位空壳。
 
 图片跟随文章放在同目录的 `imgs/` 子目录下，不单独集中存放。
 
@@ -50,8 +50,8 @@ templates/         # 写作模板
 
 ## 工作流
 
-1. 素材丢进 `00-Inbox/`
-2. 开写时从模板创建，放入 `01-Drafts/{专栏名}/`
+1. 素材丢进 `Inbox/`
+2. 开写时从模板创建，放入 `Drafts/{专栏名}/`
 3. 写完审阅后更新 status: ready
 4. 发布到各平台，把链接填入 frontmatter
-5. 移入 `02-Published/`
+5. 移入 `Published/`
